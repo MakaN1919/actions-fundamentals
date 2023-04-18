@@ -23,4 +23,11 @@ jobs:
         run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+  CustomAction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Custom Action with docker image
+        uses: MakaN1919/hello-world-docker-action@v1
+        with:
+          who-to-greet: 'Me'
     
